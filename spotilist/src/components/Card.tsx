@@ -4,8 +4,7 @@ function Card({name, artist, album, functionHandler}: Track & {functionHandler :
     return (
         <div className={styles.card}>
             <p className={styles.title}>{name}</p>
-            <p>{artist}</p>
-            <p>{album}</p>
+            <p>{artist} | {album}</p>
             <button onClick={()=>functionHandler({name, artist, album})}> </button>
         </div>
     )
