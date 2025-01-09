@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Abstand zwischen den beiden Spalten */
+    align-items: flex-start; /* Oben ausgerichtet */
+    gap: 20px; /* Abstand zwischen Spalten */
+    width: 100%;
+    max-width: 1200px; /* Maximale Breite des Containers */
+    margin: 20px auto; /* Zentriere den Container auf der Seite */
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+    border-radius: 12px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
+}
+
+.column {
+    width: 48%; /* Beide Spalten nehmen etwa die Hälfte der Breite ein */
+    background-color: rgba(255, 255, 255, 0.1); /* Halbtransparenter weißer Hintergrund */
+    border-radius: 8px; /* Leicht abgerundete Ecken */
+    padding: 16px; /* Innenabstand */
+    color: #fff; /* Weißer Text */
+}
+
+.column h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left; /* Links ausgerichtet */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Unterstrich */
+    padding-bottom: 8px;
+}
+
+
+.searchbar {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex; /* Positioniere die Kinder nebeneinander */
+    justify-content: space-between; /* Verteile den Platz gleichmäßig */
+    align-items: flex-start; /* Oben ausgerichtet */
+    width: 100%; /* Container füllt die gesamte Breite */
+    max-width: 1200px; /* Begrenze die maximale Breite */
+    gap: 20px; /* Abstand zwischen Suchergebnissen und Playlist */
+    margin-top: 20px; /* Platz unter der Suchleiste */
+}
+
+.searchlist {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.playlist {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+h1 {
+    margin-bottom: 10px; 
+}
+.backgroundimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh; /* Damit es die volle Höhe einnimmt */
+}
