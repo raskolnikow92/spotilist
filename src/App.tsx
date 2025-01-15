@@ -3,11 +3,12 @@
 import styles from './modules/App.module.css'
 import SearchBar from './components/SearchBar'
 import { useEffect, useState } from 'react';
-import { getAccessToken } from './util/Auth';
+import { getAccessToken, connect } from './util/Auth';
 import SearchResults from './components/SearchResults';
 import mocktracks from './util/MockTracks';
 import PlayList from './components/PlayList';
 import Track from './components/Track';
+
 
 
   
@@ -26,14 +27,16 @@ function App() {
   const fetchToken = async () => {
     try{
       const completeToken = await getAccessToken(client_id, client_secret);
-      setToken(completeToken.access_token);
-      setTokenExpireDate(completeToken.expires_in)
+      //console.log(completeToken);
+      //setToken(completeToken.access_token);
+      //setTokenExpireDate(completeToken.expires_in)
     }catch(error){
       console.log("Failed to fetch Spotify token:", error);
     }
   }
 
   useEffect(()=>{
+    connect();
     fetchToken();
     console.log(token);
   },[]);
