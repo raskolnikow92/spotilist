@@ -40,7 +40,7 @@ function App() {
     fetchToken();
     console.log(token);
   },[]);
-  useEffect(()=>{
+  /*useEffect(()=>{
     if(tokenExpireDate <= 100){
       fetchToken()
     }
@@ -48,7 +48,7 @@ function App() {
       setTokenExpireDate(prev => prev -1);
     },1000);
     return () => clearInterval(intervalId);
-  },[tokenExpireDate])
+  },[tokenExpireDate])*/
 
   const onSearch = (search: string):void => {
     setSearch(search);
